@@ -1,0 +1,46 @@
+body {
+  background-color: #f5f3ec; }
+
+header {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-size: 22px;
+  top: 0;
+  margin: auto;
+  z-index: 1000;
+  padding: 0 2% 0 2%;
+  color: white; }
+  header ul {
+    float: right;
+    z-index: 50; }
+    header ul li {
+      display: inline-block; }
+
+.intro {
+  width: 100%;
+  background-image: url("missionctrl.jpg");
+  background-repeat: no-repeat;
+  height: 600px;
+  z-index: 0;
+  background-size: 100%;
+  background-position: 0 25%;
+  margin-top: 0;
+  padding-top: 0; }
+  .intro h1 {
+    font-size: 6em;
+    margin-top: 15%;
+    color: #f5f3ec; }
+  .intro i {
+    margin-top: 25%;
+    color: #f5f3ec;
+    font-size: 36em;
+    padding-left: 55%;
+    z-index: -1; }
+
+.astro-not {
+  width: auto;
+  background-color: white;
+  height: 500px; }
+  .astro-not h1 {
+    text-align: center; }
