@@ -2,15 +2,17 @@
   "name": "portfolio3",
   "version": "1.0.0",
   "description": "",
-  "main": "public/scripts/main.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "node-sass public/styles/master.scss public/styles/master.css -w"
+    "sass": "node-sass public/styles/master.scss public/styles/master.css -w",
+    "server": "node server.js"
   },
   "author": "Max Krause",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^3.3.6",
+    "express": "^4.13.4",
     "jquery": "^2.2.1",
     "node-sass": "^3.4.2",
     "scrollmagic": "^2.0.5"
