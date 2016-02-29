@@ -95,14 +95,10 @@ header {
     font-size: 2em;
   }
   i {
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
+    //REQUIRED TO RESIZE ROBOTICON
     &:before{
       font-size: 120px;
       color:#27AE60;
-      margin-left: auto;
-      margin-right: auto;
     }
   }
   .what-i-do{
@@ -113,7 +109,7 @@ header {
 
 //PHOTO BREAK SECTION 1 HOLDS ALL ELEMENT CLASSES
 .photo-break-1{
-  height:300px;
+  height:400px;
   background-image: url("../images/pioneer10concept.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -129,6 +125,43 @@ header {
   color:white;
 }
 
+//PHOTO BREAK SECTION 2
+
+.photo-break-2{
+  height:400px;
+  background-image: url("../images/viewFromSpace.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  clear:both;
+  background-attachment: fixed;
+}
+#adams {
+  opacity: 0;
+}
+
+//PHOTO BREAK SECTION 3
+.photo-break-3{
+  height:400px;
+  background-image: url("../images/projectMercury.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  clear:both;
+  background-attachment: fixed;
+}
+#clarke {
+  opacity: 0;
+}
+
+//PHOTO BREAK SECTION 4
+.photo-break-4{
+  height:400px;
+  background-image: url("../images/landing2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  clear:both;
+}
+
+
 
 //DESIGN SECTION BEGIN
 .design {
@@ -136,4 +169,40 @@ header {
   width:80%;
   background-color: white;
   height:500px;
+  i {
+    //REQUIRED TO RESIZE ROBOTICON
+    &:before{
+      font-size: 120px;
+      color:#27AE60;
+    }
+  }
+}
+
+//DEVELOP SECTION BEGIN
+.develop {
+  float:right;
+  width:80%;
+  background-color: white;
+  height:500px;
+  i {
+    //REQUIRED TO RESIZE ROBOTICON
+    &:before{
+      font-size: 120px;
+      color:#27AE60;
+    }
+  }
+}
+//OPERATE SECTION BEGIN
+.operate {
+  float:right;
+  width:80%;
+  background-color: white;
+  height:500px;
+  i {
+    //REQUIRED TO RESIZE ROBOTICON
+    &:before{
+      font-size: 120px;
+      color:#27AE60;
+    }
+  }
 }

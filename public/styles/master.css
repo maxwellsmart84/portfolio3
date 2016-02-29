@@ -77,21 +77,15 @@ header {
   .astro-not p {
     text-align: center;
     font-size: 2em; }
-  .astro-not i {
-    display: block;
-    margin-left: auto;
-    margin-right: auto; }
-    .astro-not i:before {
-      font-size: 120px;
-      color: #27AE60;
-      margin-left: auto;
-      margin-right: auto; }
+  .astro-not i:before {
+    font-size: 120px;
+    color: #27AE60; }
   .astro-not .what-i-do {
     font-size: 3em;
     text-align: center; }
 
 .photo-break-1 {
-  height: 300px;
+  height: 400px;
   background-image: url("../images/pioneer10concept.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -105,8 +99,58 @@ header {
   font-size: 2em;
   color: white; }
 
+.photo-break-2 {
+  height: 400px;
+  background-image: url("../images/viewFromSpace.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  clear: both;
+  background-attachment: fixed; }
+
+#adams {
+  opacity: 0; }
+
+.photo-break-3 {
+  height: 400px;
+  background-image: url("../images/projectMercury.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  clear: both;
+  background-attachment: fixed; }
+
+#clarke {
+  opacity: 0; }
+
+.photo-break-4 {
+  height: 400px;
+  background-image: url("../images/landing2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  clear: both; }
+
 .design {
   float: right;
   width: 80%;
   background-color: white;
   height: 500px; }
+  .design i:before {
+    font-size: 120px;
+    color: #27AE60; }
+
+.develop {
+  float: right;
+  width: 80%;
+  background-color: white;
+  height: 500px; }
+  .develop i:before {
+    font-size: 120px;
+    color: #27AE60; }
+
+.operate {
+  float: right;
+  width: 80%;
+  background-color: white;
+  height: 500px; }
+  .operate i:before {
+    font-size: 120px;
+    color: #27AE60; }

@@ -12,6 +12,8 @@ var page = {
   initEvents: function(){
     page.scrollMagicIntro();
     page.scrollMagicPhotoBreak1();
+    page.scrollMagicPhotoBreak2();
+    page.scrollMagicPhotoBreak3();
   },
 
   scrollMagicIntro: function(){
@@ -59,7 +61,7 @@ var page = {
     var scene = new ScrollMagic.Scene({
       triggerElement:'.photo-break-1',
       offset: 250,
-      reverse:true
+      reverse:false
     })
     .setTween(authorAppear)
     .addTo(scrollMagicCtrl);
@@ -67,13 +69,61 @@ var page = {
     //PIN QUOTE SCENE
     var scene2 = new ScrollMagic.Scene({
       triggerElement:'.photo-break-1',
-      duration: 260,
-      reverse:true
+      duration: 240,
+      reverse:false
     })
-    .setPin('.quote', {pushFollowers:false})
+    .setPin('#quote1', {pushFollowers:false})
     .addTo(scrollMagicCtrl);
-}
+},
 
+  scrollMagicPhotoBreak2: function(){
+    var scrollMagicCtrl = new ScrollMagic.Controller();
+    var authorAppear = TweenMax.to('#adams', 2,{
+      opacity: 1
+    });
+    //REVEAL QUOTE SCENE
+    var scene = new ScrollMagic.Scene({
+      triggerElement:'.photo-break-2',
+      offset: 250,
+      reverse:false
+    })
+    .setTween(authorAppear)
+    .addTo(scrollMagicCtrl);
+    scene.addIndicators({name: "Adams start"});
+    //PIN QUOTE SCENE
+    var scene2 = new ScrollMagic.Scene({
+      triggerElement:'.photo-break-2',
+      duration: 240,
+      reverse:false
+    })
+    .setPin('#quote2', {pushFollowers:false})
+    .addTo(scrollMagicCtrl);
+  },
+
+  
+  scrollMagicPhotoBreak3: function(){
+    var scrollMagicCtrl = new ScrollMagic.Controller();
+    var authorAppear = TweenMax.to('#clarke', 2,{
+      opacity: 1
+    });
+    //REVEAL QUOTE SCENE
+    var scene = new ScrollMagic.Scene({
+      triggerElement:'.photo-break-3',
+      offset: 250,
+      reverse:false
+    })
+    .setTween(authorAppear)
+    .addTo(scrollMagicCtrl);
+    scene.addIndicators({name: "Clarke start"});
+    //PIN QUOTE SCENE
+    var scene2 = new ScrollMagic.Scene({
+      triggerElement:'.photo-break-3',
+      duration: 240,
+      reverse:false
+    })
+    .setPin('#quote3', {pushFollowers:false})
+    .addTo(scrollMagicCtrl);
+  }
 
 
 //OBJ LITERAL ENDING  DO NOT DELETE BELOW HERE
