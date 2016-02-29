@@ -33,63 +33,66 @@ header {
 .intro {
   width:100%;
   background: url('../images/missionctrl.jpg') no-repeat fixed;
-  background-repeat: no-repeat;
   height:800px;
   background-attachment: fixed;
-  z-index: 0;
+  z-index: 1;
   margin:0;
   background-size:cover;
   margin-top: 0;
   padding-top: 0;
   h1 {
-    position:absolute;
     font-size: 6em;
     color:#f5f3ec;
-    bottom:-400px;
   }
   i{
-    margin-top: 25%;
+    position:relative;
     color:#f5f3ec;
     font-size: 36em;
     padding-left: 55%;
-    z-index: -1;
+    position: relative;
+    top: 800px;
   }
 }
 
+//COUNTDOWN TIMER CLASS HOLDS ALL COUNTDOWN TIMER ELEMENT CLASSES
 .left-countdown{
   padding-top: 9%;
-  display:inline-block;
   width:20%;
   background-color: black;
   height:500px;
+  float:left;
+  clear:left;
 }
 
 .countdown-circle {
-  padding-left: 90%;
-  margin-top: 3%;
   border-radius: 100%;
-  width: 385%;
+  width: 100%;
   border-width: 20px;
   border-style: inset;
   border-color: #e41919;
-  height: 220px;
+  height: 228px;
   h1{
     font-size: 9em;
     color:white;
+    text-align: center;
   }
 }
 
-
+//FIRST SECTION WITH ROBOT
 .astro-not {
   float:right;
   width:80%;
   background-color: #f5f3ec;
   height:500px;
+  float:right;
+  clear:right;
+  z-index: 0;
   h2 {
     text-align: center;
   }
   p{
     text-align: center;
+    font-size: 2em;
   }
   i {
     display:block;
@@ -102,16 +105,32 @@ header {
       margin-right: auto;
     }
   }
+  .what-i-do{
+    font-size: 3em;
+    text-align: center;
+  }
 }
 
+//PHOTO BREAK SECTION 1 HOLDS ALL ELEMENT CLASSES
 .photo-break-1{
   height:300px;
   background-image: url("../images/pioneer10concept.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  clear:both;
+  background-attachment: fixed;
+}
+#picasso{
+  opacity: 0
+}
+
+.quote {
+  font-size: 2em;
+  color:white;
 }
 
 
+//DESIGN SECTION BEGIN
 .design {
   float:right;
   width:80%;

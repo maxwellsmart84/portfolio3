@@ -26,55 +26,57 @@ header {
 .intro {
   width: 100%;
   background: url("../images/missionctrl.jpg") no-repeat fixed;
-  background-repeat: no-repeat;
   height: 800px;
   background-attachment: fixed;
-  z-index: 0;
+  z-index: 1;
   margin: 0;
   background-size: cover;
   margin-top: 0;
   padding-top: 0; }
   .intro h1 {
-    position: absolute;
     font-size: 6em;
-    color: #f5f3ec;
-    bottom: -400px; }
+    color: #f5f3ec; }
   .intro i {
-    margin-top: 25%;
+    position: relative;
     color: #f5f3ec;
     font-size: 36em;
     padding-left: 55%;
-    z-index: -1; }
+    position: relative;
+    top: 800px; }
 
 .left-countdown {
   padding-top: 9%;
-  display: inline-block;
   width: 20%;
   background-color: black;
-  height: 500px; }
+  height: 500px;
+  float: left;
+  clear: left; }
 
 .countdown-circle {
-  padding-left: 90%;
-  margin-top: 3%;
   border-radius: 100%;
-  width: 385%;
+  width: 100%;
   border-width: 20px;
   border-style: inset;
   border-color: #e41919;
-  height: 220px; }
+  height: 228px; }
   .countdown-circle h1 {
     font-size: 9em;
-    color: white; }
+    color: white;
+    text-align: center; }
 
 .astro-not {
   float: right;
   width: 80%;
   background-color: #f5f3ec;
-  height: 500px; }
+  height: 500px;
+  float: right;
+  clear: right;
+  z-index: 0; }
   .astro-not h2 {
     text-align: center; }
   .astro-not p {
-    text-align: center; }
+    text-align: center;
+    font-size: 2em; }
   .astro-not i {
     display: block;
     margin-left: auto;
@@ -84,12 +86,24 @@ header {
       color: #27AE60;
       margin-left: auto;
       margin-right: auto; }
+  .astro-not .what-i-do {
+    font-size: 3em;
+    text-align: center; }
 
 .photo-break-1 {
   height: 300px;
   background-image: url("../images/pioneer10concept.jpg");
   background-repeat: no-repeat;
-  background-position: center; }
+  background-position: center;
+  clear: both;
+  background-attachment: fixed; }
+
+#picasso {
+  opacity: 0; }
+
+.quote {
+  font-size: 2em;
+  color: white; }
 
 .design {
   float: right;
