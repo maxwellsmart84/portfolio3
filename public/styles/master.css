@@ -22,6 +22,9 @@ header {
     padding: 5px 0; }
     header ul li {
       display: inline-block; }
+      header ul li:hover {
+        text-decoration: underline;
+        cursor: pointer; }
 
 .intro {
   width: 100%;

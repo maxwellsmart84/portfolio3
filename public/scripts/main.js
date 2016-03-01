@@ -19,17 +19,24 @@ var page = {
     page.countdownTimer3();
     page.countdownTimer2();
     page.countdownTimer1();
+    page.clickEvtWorkView();
+    page.clickEvtAboutView();
+    page.clickEvtHomeView();
   },
+
+
+
+///////////////////// BEGIN ANIMATIONS ////////////////////////////////
+//////////////////////////////////////////////////////////////////////
 
   countdownTimer5: function(){
     var scrollMagicCtrl = new ScrollMagic.Controller();
-    var timeLine = new TimelineMax();
+    var timeLine = new TimelineMax({repeat: 10, repeatDelay: 2.5, yoyo:true});
     var countDownNumBig = TweenMax.to('#countNum5', 1, {
-        scale: 1.5,
-        color: '#b40f0f'
+        scale: 1.3
     });
     var countDownNumSm = TweenMax.to('#countNum5', 1, {
-        scale:1,
+        scale:1 ,
         color: 'white'
     });
     timeLine
@@ -37,19 +44,20 @@ var page = {
       .add(countDownNumSm);
       var scene = new ScrollMagic.Scene({
         triggerElement:'#countDown5',
-        offset: 250,
-        reverse:true
+        offset: 230,
+        reverse:false
       })
       .setTween(timeLine)
       .addTo(scrollMagicCtrl);
+      scene.addIndicators({name: "Clarke start"});
+
   },
 
   countdownTimer4: function(){
     var scrollMagicCtrl = new ScrollMagic.Controller();
-    var timeLine = new TimelineMax();
+    var timeLine = new TimelineMax({repeat: 10, repeatDelay: 2.5, yoyo:true});
     var countDownNumBig = TweenMax.to('#countNum4', 1, {
-        scale: 1.5,
-        color: '#b40f0f'
+        scale: 1.5
     });
     var countDownNumSm = TweenMax.to('#countNum4', 1, {
         scale:1,
@@ -60,7 +68,7 @@ var page = {
       .add(countDownNumSm);
       var scene = new ScrollMagic.Scene({
         triggerElement:'#countDown4',
-        offset: 250,
+        offset: 230,
         reverse:true
       })
       .setTween(timeLine)
@@ -69,32 +77,29 @@ var page = {
 
   countdownTimer3: function(){
     var scrollMagicCtrl = new ScrollMagic.Controller();
-    var timeLine = new TimelineMax();
+    var timeLine = new TimelineMax({repeat: 10, repeatDelay: 2.5, yoyo:true});
     var countDownNumBig = TweenMax.to('#countNum3', 1, {
-        scale: 1.5,
-        color: '#b40f0f'
+        scale: 1.5
     });
     var countDownNumSm = TweenMax.to('#countNum3', 1, {
         scale:1,
-        color: 'white'
+        color: 'white',
     });
     timeLine
       .add(countDownNumBig)
       .add(countDownNumSm);
       var scene = new ScrollMagic.Scene({
         triggerElement:'#countDown3',
-        offset: 250,
-        reverse:true
+        offset: 230,
       })
       .setTween(timeLine)
       .addTo(scrollMagicCtrl);
   },
   countdownTimer2: function(){
     var scrollMagicCtrl = new ScrollMagic.Controller();
-    var timeLine = new TimelineMax();
+    var timeLine = new TimelineMax({repeat: 10, repeatDelay: 2.5, yoyo:true});
     var countDownNumBig = TweenMax.to('#countNum2', 1, {
-        scale: 1.5,
-        color: '#b40f0f'
+        scale: 1.5
     });
     var countDownNumSm = TweenMax.to('#countNum2', 1, {
         scale:1,
@@ -105,8 +110,7 @@ var page = {
       .add(countDownNumSm);
       var scene = new ScrollMagic.Scene({
         triggerElement:'#countDown2',
-        offset: 250,
-        reverse:true
+        offset: 230,
       })
       .setTween(timeLine)
       .addTo(scrollMagicCtrl);
@@ -140,7 +144,7 @@ var page = {
   })
   .setTween(timeLine)
   .addTo(scrollMagicCtrl);
-  scene.addIndicators({name:"Rocket Start"});
+  // scene.addIndicators({name:"Rocket Start"});
 
   //Declaring Scene 2 (Ready to launch text pinned)
   var scene2 = new ScrollMagic.Scene({
@@ -165,7 +169,7 @@ var page = {
     })
     .setTween(authorAppear)
     .addTo(scrollMagicCtrl);
-    scene.addIndicators({name: "Picasso start"});
+    // scene.addIndicators({name: "Picasso start"});
     //PIN QUOTE SCENE
     var scene2 = new ScrollMagic.Scene({
       triggerElement:'.photo-break-1',
@@ -213,7 +217,7 @@ var page = {
     })
     .setTween(authorAppear)
     .addTo(scrollMagicCtrl);
-    scene.addIndicators({name: "Clarke start"});
+    // scene.addIndicators({name: "Clarke start"});
     //PIN QUOTE SCENE
     var scene2 = new ScrollMagic.Scene({
       triggerElement:'.photo-break-3',
@@ -222,8 +226,41 @@ var page = {
     })
     .setPin('#quote3', {pushFollowers:false})
     .addTo(scrollMagicCtrl);
-  }
+  },
 
+
+/////////////////////// END ANIMATIONS //////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+
+/////////////////////// CLICK EVENTS BEGIN //////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
+
+  clickEvtAboutView: function(){
+    $('body').on('click', '#aboutLink', function(event){
+      console.log("im clicked about");
+      $('#landing').addClass('hidden');
+      $('#work').addClass('hidden');
+      $('#about').removeClass('hidden');
+    });
+  },
+
+  clickEvtWorkView: function(){
+    $('body').on('click', '#workLink', function(event){
+      console.log("im clicked work");
+      $('#landing').addClass('hidden');
+      $('#about').addClass('hidden');
+      $('#work').removeClass('hidden');
+    });
+  },
+
+  clickEvtHomeView: function(){
+    $('body').on('click', '#landingLink', function(event){
+      console.log("im clicked");
+      $('#work').addClass('hidden');
+      $('#about').addClass('hidden');
+      $('#landing').removeClass('hidden');
+    });
+  }
 
 
 //OBJ LITERAL ENDING  DO NOT DELETE BELOW HERE

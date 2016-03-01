@@ -26,6 +26,10 @@ header {
     padding:5px 0;
     li{
       display: inline-block;
+      &:hover{
+        text-decoration: underline;
+        cursor: pointer;
+      }
     }
   }
 }
