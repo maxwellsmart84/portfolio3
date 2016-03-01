@@ -52,6 +52,11 @@ header {
   float: left;
   clear: left; }
 
+.countNum {
+  font-size: 9em;
+  color: white;
+  text-align: center; }
+
 .countdown-circle {
   border-radius: 100%;
   width: 100%;
@@ -59,10 +64,6 @@ header {
   border-style: inset;
   border-color: #e41919;
   height: 228px; }
-  .countdown-circle h1 {
-    font-size: 9em;
-    color: white;
-    text-align: center; }
 
 .astro-not {
   float: right;
