@@ -13,7 +13,10 @@
   "dependencies": {
     "bootstrap": "^3.3.6",
     "express": "^4.13.4",
+    "instafeed.js": "^1.4.1",
+    "instagram-node": "^0.5.8",
     "jquery": "^2.2.1",
+    "masonry-layout": "^4.0.0",
     "node-sass": "^3.4.2",
     "scrollmagic": "^2.0.5"
   }

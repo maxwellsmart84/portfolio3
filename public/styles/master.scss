@@ -1,3 +1,10 @@
+//IMPORTED FONTS
+@font-face {
+  font-family: 'Orator';
+  src: url('OratorStd.otf');
+}
+
+//BEGIN STYLING
 body{
   background-color:#f5f3ec;
   max-width: 100%;
@@ -83,6 +90,20 @@ header {
   height: 228px;
 }
 
+.circle-last{
+  height:262px;
+}
+#countNum1{
+  font-size: 14em;
+  margin-top: 0;
+}
+.launchButton{
+  color:white;
+  background-color:rgba(#d2290c, 0.9);
+  font-size: 3em;
+  opacity:0;
+}
+
 //FIRST SECTION WITH ROBOT
 .astro-not {
   float:right;
@@ -119,6 +140,7 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   clear:both;
+  background-size:cover;
   background-attachment: fixed;
 }
 #picasso{
@@ -137,6 +159,7 @@ header {
   background-image: url("../images/viewFromSpace.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size:cover;
   clear:both;
   background-attachment: fixed;
 }
@@ -150,6 +173,7 @@ header {
   background-image: url("../images/projectMercury.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size:cover;
   clear:both;
   background-attachment: fixed;
 }
@@ -164,6 +188,7 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   clear:both;
+  background-size:cover;
 }
 
 
@@ -209,5 +234,14 @@ header {
       font-size: 120px;
       color:#27AE60;
     }
+  }
+}
+
+/////////////////ABOUT VIEW//////////////////////////
+
+#about {
+  margin-top: 200px;
+  h1{
+    text-align: center;
   }
 }

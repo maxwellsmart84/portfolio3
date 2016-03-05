@@ -1,3 +1,7 @@
+@font-face {
+  font-family: 'Orator';
+  src: url("OratorStd.otf"); }
+
 body {
   background-color: #f5f3ec;
   max-width: 100%;
@@ -68,6 +72,19 @@ header {
   border-color: #e41919;
   height: 228px; }
 
+.circle-last {
+  height: 262px; }
+
+#countNum1 {
+  font-size: 14em;
+  margin-top: 0; }
+
+.launchButton {
+  color: white;
+  background-color: rgba(210, 41, 12, 0.9);
+  font-size: 3em;
+  opacity: 0; }
+
 .astro-not {
   float: right;
   width: 80%;
@@ -94,6 +111,7 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   clear: both;
+  background-size: cover;
   background-attachment: fixed; }
 
 #picasso {
@@ -108,6 +126,7 @@ header {
   background-image: url("../images/viewFromSpace.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   clear: both;
   background-attachment: fixed; }
 
@@ -119,6 +138,7 @@ header {
   background-image: url("../images/projectMercury.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   clear: both;
   background-attachment: fixed; }
 
@@ -130,7 +150,8 @@ header {
   background-image: url("../images/landing2.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  clear: both; }
+  clear: both;
+  background-size: cover; }
 
 .design {
   float: right;
@@ -158,3 +179,8 @@ header {
   .operate i:before {
     font-size: 120px;
     color: #27AE60; }
+
+#about {
+  margin-top: 200px; }
+  #about h1 {
+    text-align: center; }

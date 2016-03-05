@@ -22,7 +22,10 @@ var page = {
     page.clickEvtWorkView();
     page.clickEvtAboutView();
     page.clickEvtHomeView();
+    page.instaFeedJS();
   },
+
+
 
 
 
@@ -44,7 +47,6 @@ var page = {
       .add(countDownNumSm);
       var scene = new ScrollMagic.Scene({
         triggerElement:'#countDown5',
-        offset: 230,
         reverse:false
       })
       .setTween(timeLine)
@@ -68,7 +70,6 @@ var page = {
       .add(countDownNumSm);
       var scene = new ScrollMagic.Scene({
         triggerElement:'#countDown4',
-        offset: 230,
         reverse:true
       })
       .setTween(timeLine)
@@ -90,7 +91,6 @@ var page = {
       .add(countDownNumSm);
       var scene = new ScrollMagic.Scene({
         triggerElement:'#countDown3',
-        offset: 230,
       })
       .setTween(timeLine)
       .addTo(scrollMagicCtrl);
@@ -110,7 +110,6 @@ var page = {
       .add(countDownNumSm);
       var scene = new ScrollMagic.Scene({
         triggerElement:'#countDown2',
-        offset: 230,
       })
       .setTween(timeLine)
       .addTo(scrollMagicCtrl);
@@ -118,7 +117,36 @@ var page = {
   countdownTimer1: function(){
     var scrollMagicCtrl = new ScrollMagic.Controller();
     var timeLine = new TimelineMax();
-
+    var countDownNumBig = TweenMax.to('#countNum1', 2.5, {
+        scale: 1.3,
+        color: '#d00a0a',
+        delay: 2
+    });
+    var hideCountDownNumBig = TweenMax.to('.countdown-circle', 1,{
+      opacity: 0,
+      display: 'none'
+    });
+    var launchAppear = TweenMax.to('.launchButton', 0.5, {
+      opacity: 1
+    });
+    var launchButton = TweenMax.fromTo('.launchButton', 1, {
+      boxShadow: "0px 0px 5px 2px rgba(255, 0, 0, 0.3)"},
+      {
+        boxShadow: "0px 0px 30px 15px rgba(255,0,0,0.7)",
+        repeat: -1,
+        yoyo: true,
+        ease: Linear.easeNone
+        });
+    timeLine
+    .add(countDownNumBig)
+    .add(hideCountDownNumBig)
+    .add(launchAppear)
+    .add(launchButton);
+    var scene = new ScrollMagic.Scene({
+      triggerElement:'.photo-break-4'
+    })
+    .setTween(timeLine)
+    .addTo(scrollMagicCtrl);
   },
 
   scrollMagicIntro: function(){
@@ -231,6 +259,33 @@ var page = {
 
 /////////////////////// END ANIMATIONS //////////////////////////////////
 /////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////// MASONRY JAVSCRIPT ////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
+    // masonryLayout: function(){
+    //   'instaFeed'
+    // },
+
+
+/////////////////////// INSTAFEED JAVSCRIPT////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
+    instaFeedJS: function(){
+      var token = '1727382786.0026c9a.e3dbd00f5e3b4488a16c0a4d1292a113';
+      var token2 = 'dafda223e7004630a76c43af86349865';
+      var feed = new Instafeed({
+        get: 'tagged',
+        sortBy: 'most-recent',
+        resolution: 'standard_resolution',
+        tagName: '39portmk',
+        clientId: '0026c9a8b09149718be94f73e1778285',
+        userId: 'krausemaxwell',
+        accessToken: token,
+        template: '<img src class="masonry-image" ="{{image}}" />',
+        limit: 100
+    });
+    feed.run();
+  },
 
 /////////////////////// CLICK EVENTS BEGIN //////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////
